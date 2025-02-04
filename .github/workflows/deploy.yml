@@ -21,7 +21,7 @@ jobs:
     - name: SSH into GCP and deploy
       run: |
         gcloud compute ssh my-vm-instance --zone us-central1-a --command "
-        cd /home/user && git clone https://github.com/username/MyDockerWebsite.git || (cd MyDockerWebsite && git pull)
+        cd /home/user && git clone https://github.com/adminjoy/MyDockerWebsite.git || (cd MyDockerWebsite && git pull)
         cd MyDockerWebsite
         docker stop website || true
         docker rm website || true
